@@ -28,8 +28,14 @@ Send start/stop times to Clawd:
 | 2026-03-27 | 11:32 | 15:45 | 4.22h | agent swarm |
 | 2026-03-29 | 13:48 | 18:32 | 4.73h | |
 
-**Month Total:** 72.74h / 30h cap
-**Month Overtime:** 42.74h
+## April 2026
+
+| Date | Start | End | Hours | Note |
+|------|-------|-----|-------|------|
+| 2026-04-02 | 10:37 | - | - | |
+
+**Month Total:** 0h / 30h cap
+**Month Overtime:** 0h
 **Cumulative:** 320.50h
 
 ---
