@@ -47,10 +47,11 @@ Send start/stop times to Clawd:
 | 2026-04-18 | 11:02 | 20:32 | 9.5h | |
 | 2026-04-23 | 10:21 | 17:34 | 7.22h | |
 | 2026-04-23 | 19:13 | 22:37 | 3.4h | |
+| 2026-04-24 | 11:10 | 17:33 | 6.38h | |
 
-**Month Total:** 72.91h / 30h cap
-**Month Overtime:** 42.91h
-**Cumulative:** 363.51h
+**Month Total:** 79.29h / 30h cap
+**Month Overtime:** 49.29h
+**Cumulative:** 369.89h
 
 ---
 
