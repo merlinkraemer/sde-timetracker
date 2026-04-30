@@ -55,7 +55,12 @@ Send start/stop times to Clawd:
 
 ---
 
-## Notes
-- Cap: 30h/month (556€ / 18.50€/h)
-- Reminder: 2-3 days before month end to generate Excel
-- Excel location: (set by Merlin)
+## May 2026
+
+| Date | Start | End | Hours | Note |
+|------|-------|-----|-------|------|
+| 2026-05-01 | 08:34 | - | - | |
+
+**Month Total:** 0h / 30h cap
+**Month Overtime:** 0h
+**Cumulative:** 369.89h
