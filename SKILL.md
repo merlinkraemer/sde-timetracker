@@ -1,8 +1,8 @@
 ---
 name: sde-tracker
 description: |
-  Edit, query, and analyze the SDE (Skydive Events / SUB-events GmbH) time tracker at github.com/merlinkraemer/sde-timetracker (sde-time-tracker.md).
-  Use when the user mentions: sde, skydive, sub-events, log a session, time tracker, hours this month, overtime, banked hours, stundenzettel hours, work session, or quick-log syntax like "sde 14:00-18:30".
+  Edit, query, and analyze the SDE (Skydive Events / SUB-events GmbH) time tracker.
+  Use when the user mentions: sde, skydive, sub-events, log a session, time tracker, hours this month, overtime, banked hours, stundenzettel hours, work session, start sde, stop sde, or quick-log syntax like "sde 14:00-18:30".
   Companion skill `stundenzettel` handles monthly XLSX filling — this skill handles the markdown tracker itself.
 ---
 
@@ -17,8 +17,6 @@ Operating manual for the SDE work-hours tracker.
 - **Data file:** `sde-time-tracker.md` in repo root
 - **Companion files:** `stundenzettel-skill.md` (XLSX-fill skill, separate concern)
 
-Also edited by **openclaw** via Telegram (topic: SDE time tracking). GitHub is the single source of truth — both systems pull before editing and push after.
-
 ## Ground rule: GitHub is truth
 
 Before any edit, **always**:
@@ -28,7 +26,7 @@ cd /Users/merlinkraemer/local/2-Areas/SAV/SubEvents/Stundenzettel/clawd
 git pull --rebase
 ```
 
-If `git pull --rebase` produces a conflict: **stop**. Tell the user, show the conflicting hunks, ask how to resolve. Never auto-resolve — openclaw may have just pushed a session from Telegram.
+If `git pull --rebase` produces a conflict: **stop**. Tell the user, show the conflicting hunks, ask how to resolve. Never auto-resolve.
 
 After every edit:
 
@@ -123,7 +121,7 @@ Examples:
 ## When fixing a session
 
 Ask the user to identify the row by date + start time. Then:
-- Edit in place; don't delete and re-add (preserves git blame and openclaw audit trail).
+- Edit in place; don't delete and re-add (preserves git blame).
 - Recompute month totals.
 - Commit with message describing what changed.
 
@@ -146,15 +144,13 @@ All read-only ops: `git pull --rebase` first to ensure fresh data, then read, th
 
 ## Commit message conventions
 
-Match the existing openclaw style (prose, not conventional commits):
+Prose style, not conventional commits:
 
-- Single session: `Add session <MonDD> <HH:MM>-<HH:MM> (<X.Yh>) - "<original user request>"`
-- Multiple sessions in one go: `Add sessions <MonDD> (<X.Yh> + <Y.Zh>) - "<original user request>"`
+- Single session: `Add session <MonDD> <HH:MM>-<HH:MM> (<X.Yh>) - <brief description>`
+- Multiple sessions in one go: `Add sessions <MonDD> (<X.Yh> + <Y.Zh>) - <brief description>`
 - Close incomplete session: `Close session <MonDD> <HH:MM>-<HH:MM> (<X.Yh>)`
 - Fix: `Fix session <MonDD>: <what changed>`
 - New month: include `(new month <Month YYYY>)` in the message.
-
-When Claude initiated the log (not Telegram), the trailing quoted user request is optional — use a brief description instead.
 
 ## When to ask, don't guess
 
@@ -184,6 +180,7 @@ For monthly **XLSX timesheet generation** (running `fill_stundenzettel.py`, comm
 | User says | You do |
 |-----------|--------|
 | `sde <start>-<end> [- note]` | Quick-log a session (today). Pull → add → totals → push. |
+| `sde <start>-<end> <date> [- note]` | Quick-log a session (specific date). Pull → add → totals → push. |
 | `start sde` | Open incomplete session (now → `-`). Pull → add → push. |
 | `stop sde [- note]` | Close today's open session. Pull → close → totals → push. |
 | `hours today` | Pull, sum today's rows, reply one line. |
