@@ -8,7 +8,7 @@ Send start/stop times to Clawd:
 - Or send specific times: "sde 14:00-18:30 - deployed auth fix"
 
 ## Cumulative Overtime Balance
-**As of Feb 2026: 277.76h banked**
+**As of June 2026: 428.75h banked**
 
 ## March 2026
 
@@ -93,12 +93,12 @@ Send start/stop times to Clawd:
 | 2026-06-08 | 11:22 | 15:23 | 4.02h | |
 | 2026-06-12 | 14:09 | 17:33 | 3.40h | |
 | 2026-06-16 | 12:41 | 15:25 | 2.73h | |
-| 2026-06-17 | 14:02 | - | - | |
+| 2026-06-17 | 14:02 | 18:12 | 4.17h | |
 | 2026-06-19 | 11:23 | 14:53 | 3.50h | |
 | 2026-06-19 | 17:50 | 21:29 | 3.65h | |
-| 2026-06-24 | 12:39 | - | - | |
+| 2026-06-24 | 12:39 | 16:21 | 3.70h | |
 | 2026-06-27 | 11:12 | 16:23 | 5.18h | |
 
-**Month Total:** 33.79h / 30h cap
-**Month Overtime:** 3.79h
-**Cumulative:** 420.88h
+**Month Total:** 41.66h / 30h cap
+**Month Overtime:** 11.66h
+**Cumulative:** 428.75h
