@@ -119,7 +119,10 @@ Send start/stop times to Clawd:
 | 2026-07-14 | 11:59 | 17:14 | 5.25h | |
 | 2026-07-17 | 12:14 | 17:25 | 5.18h | |
 | 2026-07-19 | 11:11 | 20:16 | 9.08h | |
+| 2026-07-20 | 12:00 | 14:30 | 2.5h | |
+| 2026-07-21 | 11:00 | 14:30 | 3.5h | brevo list sync, email slug sanitize |
+| 2026-07-22 | 13:23 | - | - | |
 
-**Month Total:** 59.90h / 30h cap
-**Month Overtime:** 29.90h
-**Cumulative:** 458.65h
+**Month Total:** 65.90h / 30h cap
+**Month Overtime:** 35.90h
+**Cumulative:** 464.65h
